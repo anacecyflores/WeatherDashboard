@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: rgb(50, 9, 36);
+    font-family:'Courier New', Courier, monospace
+}
+
+.card {
+    background: rgb(255, 255, 255);
+    padding: 1em;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input.search-bar {
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    font-family: inherit;
+}
+
+button {
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    font-family: inherit;
+}
+
+h1.city,
+h2.temp,
+div.description,
+div.humidity,
+div.wind {
+    color: white;
+}
