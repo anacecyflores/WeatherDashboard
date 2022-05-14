@@ -5,16 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-
+<header>Weather Update!   </header> 
     <title>Weather</title>
   </head>
+  
   <body>
-    <div class="card"
+     
+       <div class="card"
       <h1>Search City</h1>
    <input id="inputValue" />
       <button id="searchBtn">Search</button>
       </div>
-      <div class="weather">
+    
+    <style>
+    /* Set additional styling options for the columns*/
+    .column {
+    float: left;
+    width: 50%;
+    height: fit-content;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: black;
+    }
+
+    .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    border-color: aliceblue;
+    }
+    </style>
+ </head>
+
+ <body>
+    <div class="row">
+        <div class="column" style="background-color:#FFB695;">
+            <h2>Today's Weather</h2>
+            <p>Data..</p>
+                  <div class="information">
         <h1 class="cityName"></h1>
         <h2 class="temperature"></h2>
         <img src="" alt="" class="icon" />
@@ -22,48 +49,61 @@
         <div class="humidity"></div>
         <div class="windSpeed"></div>
       </div>
-    </div>
-    <style>
- 
-    /* Set additional styling options for the columns*/
-    .column {
-    float: left;
-    width: 50%;
-    }
-
-    .row:after {
-    content: "";
-    display: table;
-    clear: both;
-    }
-    </style>
- </head>
- <body>
-    <div class="row">
-        <div class="column" style="background-color:#FFB695;">
-            <h2>Today's Weather</h2>
-            <p>Data..</p>
         </div>
         <div class="column" style="background-color:#96D1CD;">
             <h2>Column 2</h2>
-            <p>Data..</p>
+            <p>Data..</p>      <div class="information">
+        <h1 class="cityName"></h1>
+        <h2 class="temperature"></h2>
+        <img src="" alt="" class="icon" />
+        <div class="uvIndex"></div>
+        <div class="humidity"></div>
+        <div class="windSpeed"></div>
+      </div>
         </div>
                 <div class="column" style="background-color:#FFB695;">
             <h2>Column 3</h2>
-            <p>Data..</p>
+ <div class="information">
+        <h1 class="cityName"></h1>
+        <h2 class="temperature"></h2>
+        <img src="" alt="" class="icon" />
+        <div class="uvIndex"></div>
+        <div class="humidity"></div>
+        <div class="windSpeed"></div>
+      </div>
         </div>
         <div class="column" style="background-color:#96D1CD;">
             <h2>Column 4</h2>
-            <p>Data..</p>
+<div class="information">
+        <h1 class="cityName"></h1>
+        <h2 class="temperature"></h2>
+        <img src="" alt="" class="icon" />
+        <div class="uvIndex"></div>
+        <div class="humidity"></div>
+        <div class="windSpeed"></div>
+      </div>
         </div>
                 <div class="column" style="background-color:#FFB695;">
             <h2>Column 5</h2>
-            <p>Data..</p>
+   <div class="information">
+        <h1 class="cityName"></h1>
+        <h2 class="temperature"></h2>
+        <img src="" alt="" class="icon" />
+        <div class="uvIndex"></div>
+        <div class="humidity"></div>
+        <div class="windSpeed"></div>
+      </div>
         </div>
         <div class="column" style="background-color:#96D1CD;">
             <h2>Column 6</h2>
-            <p>Data..</p>
-        </div>
+<div class="information">
+        <h1 class="cityName"></h1>
+        <h2 class="temperature"></h2>
+        <img src="" alt="" class="icon" />
+        <div class="uvIndex"></div>
+        <div class="humidity"></div>
+        <div class="windSpeed"></div>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>

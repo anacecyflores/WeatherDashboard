@@ -1,3 +1,5 @@
+//    creating multiple p elements to display all the values separately
+
 var userInput = document.getElementById("inputValue");
 var search = document.getElementById("searchBtn");
 search.addEventListener("click", function () {
@@ -19,6 +21,9 @@ function onecallAPI(lattitude, longitude) {
     })
     .then(function (uviData) {
       console.log(uviData);
+      var uvIndexEl = document.querySelector(".uvIndex");
+      uvIndexEl.textContent = uviData.current.uvi;
+      uvNumber = uviData.current.uvi;
     });
 }
 function currentWeatherAPI(location) {
@@ -41,9 +46,11 @@ function currentWeatherAPI(location) {
       humidityEl.textContent = data.main.humidity;
       console.log("Coord inside then", data.coord.lon, data.coord.lat);
       onecallAPI(data.coord.lat, data.coord.lon);
-      // Var uvIndex
+
       // console.log("name", data.name);
       // console.log("temp", data.main.temp);
       // console.log("humidity", data.main.humidity);
+      var windEl = document.querySelector(".windSpeed");
+      windEl.textContent = data.wind.speed;
     });
 }
