@@ -41,16 +41,24 @@ function currentWeatherAPI(location) {
       var cityNameEl = document.querySelector(".cityName");
       cityNameEl.textContent = data.name;
       var tempEl = document.querySelector(".temperature");
-      tempEl.textContent = data.main.temp + " ℉";
+      tempEl.textContent = "Temperature: " + data.main.temp + " ℉";
       var humidityEl = document.querySelector(".humidity");
       humidityEl.textContent = data.main.humidity;
       console.log("Coord inside then", data.coord.lon, data.coord.lat);
       onecallAPI(data.coord.lat, data.coord.lon);
-
       // console.log("name", data.name);
       // console.log("temp", data.main.temp);
       // console.log("humidity", data.main.humidity);
       var windEl = document.querySelector(".windSpeed");
       windEl.textContent = data.wind.speed;
+      var weatherIcon = data.weather[0].icon;
+      // console.log("Weather Icon here", weatherIcon);
+      var icon = document.createElement("img");
+      // console.log(icon);
+      icon.setAttribute(
+        "src",
+        `https://openweathermap.org/img/wn/${weatherIcon}.png`
+      );
+      cityNameEl.appendChild(icon);
     });
 }
