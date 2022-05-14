@@ -1,16 +1,15 @@
 //    creating multiple p elements to display all the values separately
-
 var userInput = document.getElementById("inputValue");
 var search = document.getElementById("searchBtn");
 search.addEventListener("click", function () {
   // console.log(userInput.value);
   currentWeatherAPI(userInput.value);
 });
-function onecallAPI(lattitude, longitude) {
-  console.log("inside Onecall", lattitude, longitude);
+function onecallAPI(latitude, longitude) {
+  console.log("inside Onecall", latitude, longitude);
   var uvApi =
     "https://api.openweathermap.org/data/2.5/onecall?lat=" +
-    lattitude +
+    latitude +
     "&lon=" +
     longitude +
     "&appid=5800a31e16468ce7978a067a48244cb0&units=imperial&exclude=minutely,hourly,alerts";
@@ -28,6 +27,18 @@ function onecallAPI(lattitude, longitude) {
       uvIndexEl.textContent = "UV Index: ";
       uvIndexEl.appendChild(uvSpan);
       uvNumber = uviData.current.uvi;
+
+      if (uvNumber <= 3) {
+        $("#uvColor").css("background-color", "#78c74a").attr("class", "badge");
+      } else if (uvNumber <= 5) {
+        $("#uvColor").css("background-color", "#FEC901").attr("class", "badge");
+      } else if (uvNumber <= 7) {
+        $("#uvColor").css("background-color", "#e36530").attr("class", "badge");
+      } else if (uvNumber <= 10) {
+        $("#uvColor").css("background-color", "#cc3129").attr("class", "badge");
+      } else {
+        $("#uvColor").css("background-color", "#a76ebb").attr("class", "badge");
+      }
     });
 }
 function currentWeatherAPI(location) {
@@ -64,5 +75,19 @@ function currentWeatherAPI(location) {
         `https://openweathermap.org/img/wn/${weatherIcon}.png`
       );
       cityNameEl.appendChild(icon);
+      // weatherForecast();
+      // forecastApi();
     });
+}
+function weatherForecast(forecast) {
+  var forecastApi =
+    "https://api.openweathermap.org/data/2.5/forecastl?lat=" +
+    latitude +
+    "&lon=" +
+    longitude +
+    "&appid=5800a31e16468ce7978a067a48244cb0&units=imperial&exclude=minutely,hourly,alerts";
+  fetch(weatherForecast).then(function (latitude, longitude) {
+    console.log("location", location);
+    return location.json();
+  });
 }
