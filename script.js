@@ -22,7 +22,11 @@ function onecallAPI(lattitude, longitude) {
     .then(function (uviData) {
       console.log(uviData);
       var uvIndexEl = document.querySelector(".uvIndex");
-      uvIndexEl.textContent = uviData.current.uvi;
+      var uvSpan = document.createElement("span");
+      uvSpan.setAttribute("id", "uvColor");
+      uvSpan.innerHTML = uviData.current.uvi;
+      uvIndexEl.textContent = "UV Index: ";
+      uvIndexEl.appendChild(uvSpan);
       uvNumber = uviData.current.uvi;
     });
 }
