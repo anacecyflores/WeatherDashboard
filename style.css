@@ -4,33 +4,42 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background: rgb(50, 9, 36);
-    font-family:'Courier New', Courier, monospace
+    background: rgb(235, 192, 220);
+    font-family:'Courier New', Courier, monospace;
 }
 
 header{
-    background-color: blue;
+    background-color: rgb(235, 235, 243);
     margin-top: 10px;
     align-items: center;
+        font-size: large;
 }
-.card {
-    background: rgb(255, 255, 255);
+
+/* input for city search */
+.searchCard {
+    background: rgb(198, 98, 170);
+    font-size: large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 1em;
     border-radius: 20px;
     width: 100%;
     max-width: 400px;
     margin: 20px;
 }
-
 .search {
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 .information {
-    display: flex;
-        align-items: center;
-        justify-content: center;
+padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    font-family: inherit;
+    font-size: large;
 }
 input.search-bar {
     padding: 10px;
@@ -44,12 +53,25 @@ button {
     border-radius: 10px;
     margin: 10px;
     font-family: inherit;
+        font-size: large;
+}
+col {
+    padding: 10px;
+        border-radius: 10px;
+        margin: 10px;
+        font-family: inherit;
+        font-size: large;
+
 }
 
-h1.city,
-h2.temp,
-div.description,
-div.humidity,
-div.wind {
-    color: white;
+.today {
+    color: rgb(139, 21, 131);
+    font-size: 30px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    align: center;
+}
+.fiveDay {
+    color: rgb(139, 21, 131);
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

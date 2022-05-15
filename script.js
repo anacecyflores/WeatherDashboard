@@ -91,3 +91,4 @@ function weatherForecast(forecast) {
     return location.json();
   });
 }
+function fivedayForeast() {}
