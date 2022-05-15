@@ -4,20 +4,22 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background: rgb(235, 192, 220);
+    background: rgb(146, 148, 212);
     font-family:'Courier New', Courier, monospace;
 }
-
 header{
-    background-color: rgb(235, 235, 243);
+    background-color: rgb(218, 170, 225);
     margin-top: 10px;
     align-items: center;
         font-size: large;
 }
 
+section{
+    float: left;
+}
 /* input for city search */
 .searchCard {
-    background: rgb(198, 98, 170);
+    background: rgb(190, 146, 178);
     font-size: large;
     display: flex;
     align-items: center;
@@ -65,12 +67,13 @@ col {
 }
 
 .today {
-    color: rgb(139, 21, 131);
+    background-color: rgb(145, 56, 138);
+    color: rgb(237, 226, 236);
     font-size: 30px;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    align: center;
 }
 .fiveDay {
+    background-color: rgb(198, 98, 170);
     color: rgb(139, 21, 131);
     font-size: 30px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
