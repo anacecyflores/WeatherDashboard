@@ -60,13 +60,13 @@ function currentWeatherAPI(location) {
       tempEl.textContent = "Temperature: " + data.main.temp + " ℉";
 
       var humidityEl = document.querySelector(".humidity");
-      humidityEl.textContent = data.main.humidity;
+      humidityEl.textContent = "Humidity: " + data.main.humidity;
       console.log("Coord inside then", data.coord.lon, data.coord.lat);
       onecallAPI(data.coord.lat, data.coord.lon);
       // weatherForecast(data.coord.lat, data.coord.lon);
 
       var windEl = document.querySelector(".windSpeed");
-      windEl.textContent = data.wind.speed;
+      windEl.textContent = "Wind :" + data.wind.speed;
       var weatherIcon = data.weather[0].icon;
       // console.log("Weather Icon here", weatherIcon);
       var icon = document.createElement("img");
