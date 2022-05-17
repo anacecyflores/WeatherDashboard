@@ -92,5 +92,5 @@ col {
     font-size: 30px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     flex-wrap: wrap;
-    padding-top: 1px;
+    /* padding-top: 1px; */
 }

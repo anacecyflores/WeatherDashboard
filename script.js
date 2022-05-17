@@ -1,23 +1,15 @@
-// $(document).ready(function () {
-//   function cityMemory() {
-//     var cityArray = localStorage.getItem("inpuValue");
-//--------------------------
-// if (finalScore === null) {
-//   highArray = [];
-// } else {
-//   highArray = JSON.parse(finalScore);
-//   }
-//-----------------------
-//   }
-// });
 //    creating multiple p elements to display all the values separately
 var userInput = document.getElementById("inputValue");
 var search = document.getElementById("searchBtn");
-
+$(document).ready(function () {
+  cityMemory();
+  function cityMemory() {
+    var cityArray = JSON.parse(localStorage.getItem("locationKey")) || [];
+  }
+});
 var cityArray = [];
-
 search.addEventListener("click", function () {
-  // console.log(userInput.value);
+  console.log(userInput.value);
   currentWeatherAPI(userInput.value);
 });
 function onecallAPI(latitude, longitude) {
@@ -62,11 +54,11 @@ function currentWeatherAPI(location) {
     location +
     "&appid=5800a31e16468ce7978a067a48244cb0&units=imperial";
 
-  // $();
-  // ('.empty();  "".fiveDay;');
   if (userInput != "") {
-    if (!cityArray.includes(userInput)) {
-      cityArray.push(userInput);
+    if (!cityArray.includes(userInput.value)) {
+      cityArray.push(userInput.value);
+      console.log("cityArray", cityArray);
+      console.log("user", userInput);
       var recentSearch = $(
         `<button class="recBtn list-group-item list-group-item-action">${userInput}</button>`
       );
@@ -106,7 +98,6 @@ function currentWeatherAPI(location) {
       fiveCast(location);
     });
 }
-
 // Fix double click
 function fiveCast(location) {
   var apiKey = "5800a31e16468ce7978a067a48244cb0";
