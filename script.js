@@ -145,20 +145,9 @@ function fiveCast(location) {
       forecastCard.append(forecastHumidity);
     }
   });
-
-  function showCity() {
-    var stringArray = JSON.stringify(highArray);
-    localStorage.setItem("scoreHi", stringArray);
-
-    var finalScore = localStorage.getItem("scoreHi");
-    console.log(finalScore);
-    var unRavel = JSON.parse(finalScore);
-
-    for (var i = 0; i < unRavel.length; i++) {
-      var userScore = document.createElement("li");
-      userScore.textContent = unRavel[i];
-      highTitle.appendChild(userScore);
-    }
-    console.log(unRavel);
-  }
 }
+// $(".searchCard").on("click", (e) => {
+//   var element = e.target;
+//   var elementHistory = $(element).html();
+//   currentWeatherAPI(elementHistory);
+// });
