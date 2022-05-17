@@ -38,12 +38,14 @@ section{
 
 }
 .information {
-padding: 10px;
+    padding: 10px;
     border-radius: 10px;
     margin: 10px;
     font-family: inherit;
-    font-size: 30px;
+    font-size: 15px;
+    flex-wrap: wrap;
 }
+
 input.search-bar {
     padding: 1px;
     border-radius: 1px;
@@ -86,7 +88,7 @@ col {
 }
 .fiveDay {
     background-color: rgb(198, 98, 170);
-    color: rgb(243, 230, 242);
+    color: rgb(76, 10, 76);
     font-size: 30px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     flex-wrap: wrap;

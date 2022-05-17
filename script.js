@@ -1,6 +1,21 @@
+// $(document).ready(function () {
+//   function cityMemory() {
+//     var cityArray = localStorage.getItem("inpuValue");
+//--------------------------
+// if (finalScore === null) {
+//   highArray = [];
+// } else {
+//   highArray = JSON.parse(finalScore);
+//   }
+//-----------------------
+//   }
+// });
 //    creating multiple p elements to display all the values separately
 var userInput = document.getElementById("inputValue");
 var search = document.getElementById("searchBtn");
+
+var cityArray = [];
+
 search.addEventListener("click", function () {
   // console.log(userInput.value);
   currentWeatherAPI(userInput.value);
@@ -47,8 +62,17 @@ function currentWeatherAPI(location) {
     location +
     "&appid=5800a31e16468ce7978a067a48244cb0&units=imperial";
 
-  $();
-  ('.empty();  "".fiveDay;');
+  // $();
+  // ('.empty();  "".fiveDay;');
+  if (userInput != "") {
+    if (!cityArray.includes(userInput)) {
+      cityArray.push(userInput);
+      var recentSearch = $(
+        `<button class="recBtn list-group-item list-group-item-action">${userInput}</button>`
+      );
+    }
+    localStorage.setItem("locationKey", JSON.stringify(cityArray));
+  }
   fetch(weatherApi)
     .then(function (response) {
       // console.log("response", response);
@@ -82,6 +106,7 @@ function currentWeatherAPI(location) {
       fiveCast(location);
     });
 }
+
 // Fix double click
 function fiveCast(location) {
   var apiKey = "5800a31e16468ce7978a067a48244cb0";
@@ -119,8 +144,20 @@ function fiveCast(location) {
       forecastCard.append(forecastHumidity);
     }
   });
+
+  function showCity() {
+    var stringArray = JSON.stringify(highArray);
+    localStorage.setItem("scoreHi", stringArray);
+
+    var finalScore = localStorage.getItem("scoreHi");
+    console.log(finalScore);
+    var unRavel = JSON.parse(finalScore);
+
+    for (var i = 0; i < unRavel.length; i++) {
+      var userScore = document.createElement("li");
+      userScore.textContent = unRavel[i];
+      highTitle.appendChild(userScore);
+    }
+    console.log(unRavel);
+  }
 }
-// append(forecastTitle);
-// forecastCard.append(forecastTemp);
-// forecastCard.append(forecastWind);
-// forecastCard.append(forecastHumidity);
