@@ -1,42 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: auto;
+    width: auto;
     margin: 0;
     background: rgb(146, 148, 212);
     font-family:'Courier New', Courier, monospace;
 }
-
-header{
-    background-color: rgb(218, 170, 225);
-    margin-top: 10px;
-    align-items: center;
-    font-size: large;
-}
-
-section{
-    float: left;
-}
 /* input for city search */
 .searchCard {
     background: rgb(190, 146, 178);
-    font-size: 20px;
+    font-size: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 1em;
     border-radius: 20px;
     width: 100%;
-    max-width: 400px;
+    max-width: 800px;
     margin: 10px;
+    float: left;
 }
-.search {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-}
 .information {
     padding: 10px;
     border-radius: 10px;
@@ -51,7 +41,7 @@ input.search-bar {
     border-radius: 1px;
     margin: 10px;
     font-family: inherit;
-    flex-wrap: wrap;
+    flex-wrap: content;
 }
 
 button {
@@ -60,32 +50,37 @@ button {
     margin: 10px;
     font-family: inherit;
     font-size: large;
+    flex: content;
 }
-col {
+.row {
     font-size: 20px;
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 1em;
         border-radius: 20px;
-        width: 100%;
-        max-width: 400px;
+        width: auto;
+        max-width: 350px;
         margin: 10px;
-
 }
 
 .today {
-    background-color: rgb(145, 56, 138);
+    display: flex;
     color: rgb(237, 226, 236);
     font-size: 30px;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     flex-wrap: wrap;
+    padding: 10px;
+    float: left;
+    width: auto;
 }
+
 .fiveDay {
-    background-color: rgb(198, 98, 170);
+    display: flex;
     color: rgb(76, 10, 76);
     font-size: 30px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     flex-wrap: wrap;
-    /* padding-top: 1px; */
+    padding: 10px;
+    width: auto;
 }

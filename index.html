@@ -11,16 +11,27 @@
   </head>
 
   <body>
-    <section>
-      <div class="searchCard">
-        <h1>SEARCH CITY:</h1>
-        <input id="inputValue" />
-        <button id="searchBtn">Search</button>
-      </div>
-    </section>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      /* Use a media query to add a break point at 800px: */
+      @media screen and (max-width: 800px) {
+        .left,
+        .main,
+        .right {
+          width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+        }
+      }
+    </style>
+
+    <div class="searchCard">
+      <div class="left"></div>
+      <h1>SEARCH CITY:</h1>
+      <input id="inputValue" />
+      <button id="searchBtn">Search</button>
+    </div>
 
     <div class="today">
-      <div class="column" style="background-color: #6b155e">
+      <div class="row" style="background-color: #d7b2d1">
         <h2>Today's Weather:</h2>
         <div class="information">
           <h1 class="cityName"></h1>
@@ -34,12 +45,11 @@
     </div>
 
     <div class="fiveDay">
-      <div class="column" style="background-color: #f0e3ee">
+      <div class="row" style="background-color: #f0e3ee">
         <h2>Five Day Weather:</h2>
         <div class="information">
-
           <img src="" alt="" class="icon" />
-
+        </div>
       </div>
     </div>
     <script src="script.js"></script>
