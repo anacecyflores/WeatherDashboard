@@ -5,6 +5,13 @@ $(document).ready(function () {
   cityMemory();
   function cityMemory() {
     var cityArray = JSON.parse(localStorage.getItem("locationKey")) || [];
+    if (cityArray != null) {
+      cityArray.forEach(function (cityArray) {
+        $(".searchCard").append(
+          `<button id="recBtn" class= "recBtn list-group-item list-group-item-action">${cityArray}</button>`
+        );
+      });
+    }
   }
 });
 var cityArray = [];
@@ -57,14 +64,17 @@ function currentWeatherAPI(location) {
   if (userInput != "") {
     if (!cityArray.includes(userInput.value)) {
       cityArray.push(userInput.value);
+      var cityChoice = userInput.value;
       console.log("cityArray", cityArray);
       console.log("user", userInput);
       var recentSearch = $(
-        `<button class="recBtn list-group-item list-group-item-action">${userInput}</button>`
+        `<button class="recBtn list-group-item list-group-item-action">${cityChoice}</button>`
       );
     }
+    console.log("hello", recentSearch.textContent);
     localStorage.setItem("locationKey", JSON.stringify(cityArray));
   }
+  $(".searchCard").append(recentSearch);
   fetch(weatherApi)
     .then(function (response) {
       // console.log("response", response);
