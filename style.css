@@ -11,7 +11,7 @@ body {
     margin: 0;
     /* background: rgb(146, 148, 212); */
     font-family:'Courier New', Courier, monospace;
-    background-image: url('assets/weather.jpg');
+    background-image: url('./Assets/weather.jpg');
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
