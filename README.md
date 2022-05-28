@@ -19,3 +19,8 @@ https://anacecyflores1.github.io/WeatherDashboard/
 
 Open Weather Api- Used weather API to retrieve current weather and up to a five day forecast for any user input's location.
 Javascript- Allowed for the functunality of app to work at a real time section. Allowed for user to save recent searches to Local Storage.
+
+###License
+
+![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)
+https://choosealicense.com/licenses/mit/
